@@ -589,60 +589,15 @@ if (document.readyState === 'loading') {
 
   // 初始化侧边栏管理器
   new SidebarManager();
-})();</script> <main id="swup-container" class="transition-swup-fade overflow-hidden w-full col-span-2 md:col-start-2 md:col-end-3 lg:col-start-2 lg:col-end-3 transition-main"> <div id="content-wrapper" class="onload-animation transition-leaving"> <!-- the overflow-hidden here prevent long text break the layout--> <!-- make id different from windows.swup global property -->  <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32"> <div class="card-base z-10 px-9 py-6 relative w-full "> <div data-pagefind-body class="prose dark:prose-invert prose-base !max-w-none custom-md mt-2">  <section><h1 id="关于我--about-me">关于我 / About Me<a class="anchor" href="#关于我--about-me"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h1><p>你好！我是 <strong>夏叶</strong> ，一个在数字世界中默默无闻的一片叶子。</p><section><h2 id="️-关于本站">🛠️ 关于本站<a class="anchor" href="#️-关于本站"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2><p>这个网站使用 <strong>Astro</strong> 框架构建，采用了 <a href="https://github.com/CuteLeaf/Firefly">Firefly</a>模板</p><p><strong>Firefly</strong> 是一款基于 Astro 框架开发的清新美观且现代化个人博客主题，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。</p><p><strong>🖥️在线预览： <a href="https://demo-firefly.netlify.app/">Firefly - Demo site</a></strong></p><p><strong>🏠我的博客： <a href="https://blog.cuteleaf.cn/">https://blog.cuteleaf.cn</a></strong></p><p><strong>📝Firefly使用文档： <a href="https://docs-firefly.cuteleaf.cn/">https://docs-firefly.cuteleaf.cn</a></strong></p><p><strong>⭐Firefly开源地址：<a href="https://github.com/CuteLeaf/Firefly">https://github.com/CuteLeaf/Firefly</a></strong></p><a id="GC4u4wia-card" class="card-github fetch-waiting no-styling" href="https://github.com/CuteLeaf/Firefly" target="_blank" repo="CuteLeaf/Firefly"><div class="gc-titlebar"><div class="gc-titlebar-left"><div class="gc-owner"><div id="GC4u4wia-avatar" class="gc-avatar"></div><div class="gc-user">CuteLeaf</div></div><div class="gc-divider">/</div><div class="gc-repo">Firefly</div></div><div class="github-logo"></div></div><div id="GC4u4wia-description" class="gc-description">Waiting for api.github.com...</div><div class="gc-infobar"><div id="GC4u4wia-stars" class="gc-stars">00K</div><div id="GC4u4wia-forks" class="gc-forks">0K</div><div id="GC4u4wia-license" class="gc-license">0K</div><span id="GC4u4wia-language" class="gc-language">Waiting...</span></div><script id="GC4u4wia-script" type="text/javascript" defer>
-      fetch('https://api.github.com/repos/CuteLeaf/Firefly', { referrerPolicy: "no-referrer" }).then(response => response.json()).then(data => {
-        document.getElementById('GC4u4wia-description').innerText = data.description?.replace(/:[a-zA-Z0-9_]+:/g, '') || "Description not set";
-        document.getElementById('GC4u4wia-language').innerText = data.language;
-        document.getElementById('GC4u4wia-forks').innerText = Intl.NumberFormat('en-us', { notation: "compact", maximumFractionDigits: 1 }).format(data.forks).replaceAll(" ", '');
-        document.getElementById('GC4u4wia-stars').innerText = Intl.NumberFormat('en-us', { notation: "compact", maximumFractionDigits: 1 }).format(data.stargazers_count).replaceAll(" ", '');
-        const avatarEl = document.getElementById('GC4u4wia-avatar');
-        avatarEl.style.backgroundImage = 'url(' + data.owner.avatar_url + ')';
-        avatarEl.style.backgroundColor = 'transparent';
-        document.getElementById('GC4u4wia-license').innerText = data.license?.spdx_id || "no-license";
-        document.getElementById('GC4u4wia-card').classList.remove("fetch-waiting");
-        console.log("[GITHUB-CARD] Loaded card for CuteLeaf/Firefly | GC4u4wia.")
-      }).catch(err => {
-        const c = document.getElementById('GC4u4wia-card');
-        c?.classList.add("fetch-error");
-        console.warn("[GITHUB-CARD] (Error) Loading card for CuteLeaf/Firefly | GC4u4wia.")
-      })
-    </script></a><img src="/assets/images/firefly.png"></section><section><h2 id="-技术架构">🚀 技术架构<a class="anchor" href="#-技术架构"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2><ul>
-<li><strong>静态站点生成</strong>: 基于 Astro ，提供极快的加载速度和优秀的 SEO 优化</li>
-<li><strong>TypeScript 支持</strong>: 完整的类型安全，提升开发体验和代码质量</li>
-<li><strong>响应式设计</strong>: 使用 Tailwind CSS 构建，完美适配桌面端和移动端</li>
-<li><strong>组件化开发</strong>: 支持 Astro、Svelte 组件，灵活可扩展</li>
-</ul></section><section><h2 id="-界面与主题模块">🎨 界面与主题模块<a class="anchor" href="#-界面与主题模块"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2><ul>
-<li><strong>主题色彩系统</strong>: 0-360度色相调节、主题色固定、三种默认模式</li>
-<li><strong>背景壁纸系统</strong>: Banner/覆盖双模式、响应式图片、图片定位、打字机效果</li>
-<li><strong>看板娘系统</strong>: Spine/Live2D双引擎、交互功能、动画配置</li>
-<li><strong>字体系统</strong>: 多字体支持、预加载优化、字体回退</li>
-</ul></section><section><h2 id="-导航与布局模块">🧭 导航与布局模块<a class="anchor" href="#-导航与布局模块"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2><ul>
-<li><strong>导航栏配置</strong>: 多级菜单、图标支持、预设/自定义链接</li>
-<li><strong>侧边栏系统</strong>: 模块化组件、布局控制、响应式行为</li>
-</ul></section><section><h2 id="-内容展示模块">📢 内容展示模块<a class="anchor" href="#-内容展示模块"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2><ul>
-<li><strong>公告系统</strong>: 内容配置、交互功能、显示控制</li>
-<li><strong>友链系统</strong>: 权重排序、启用控制、标签分类</li>
-<li><strong>广告系统</strong>: 多种广告类型、配置选项、广告位管理</li>
-<li><strong>目录大纲</strong>：移动端和桌面端均支持目录大纲，方便快速浏览</li>
-</ul></section><section><h2 id="️-高级配置模块">🎛️ 高级配置模块<a class="anchor" href="#️-高级配置模块"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2><ul>
-<li><strong>特效系统</strong>: 樱花特效、动画参数、循环控制</li>
-<li><strong>统计系统</strong>: Twikoo文章访问量统计、独立开关控制、多语言支持</li>
-<li><strong>开发工具</strong>: 代码高亮、主题支持、插件支持</li>
-<li><strong>许可证系统</strong>: 许可证显示、链接配置、开关控制</li>
-<li><strong>SEO优化</strong>: OpenGraph、站点信息、关键词、语言设置</li>
-</ul></section><section><h2 id="️-配置系统详解">⚙️ 配置系统详解<a class="anchor" href="#️-配置系统详解"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2><ul>
-<li><strong>模块化配置</strong>: 每个功能模块都有独立的配置文件，便于管理和维护</li>
-<li><strong>站点配置</strong>：网站基础信息、主题色彩、图标、语言设置</li>
-<li><strong>用户资料配置</strong>：头像、姓名、简介、社交链接</li>
-<li><strong>功能配置</strong>：评论系统、公告、许可证、页脚、统计</li>
-<li><strong>样式配置</strong>：代码高亮、樱花特效、字体管理</li>
-<li><strong>布局配置</strong>：侧边栏、导航栏组件管理</li>
-<li><strong>组件配置</strong>：音乐播放器、看板娘、广告、友链</li>
-<li><strong>页脚HTML</strong>：自定义HTML内容注入</li>
-</ul></section><section><h2 id="-联系方式">📫 联系方式<a class="anchor" href="#-联系方式"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2><p>如果你想和我交流技术问题，分享有趣的想法，或者只是想打个招呼，欢迎通过以下方式联系我：</p><ul>
+})();</script> <main id="swup-container" class="transition-swup-fade overflow-hidden w-full col-span-2 md:col-start-2 md:col-end-3 lg:col-start-2 lg:col-end-3 transition-main"> <div id="content-wrapper" class="onload-animation transition-leaving"> <!-- the overflow-hidden here prevent long text break the layout--> <!-- make id different from windows.swup global property -->  <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32"> <div class="card-base z-10 px-9 py-6 relative w-full "> <div data-pagefind-body class="prose dark:prose-invert prose-base !max-w-none custom-md mt-2">  <section><h1 id="关于我--about-me">关于我 / About Me<a class="anchor" href="#关于我--about-me"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h1><p>欢迎来到我的博客！我是 <strong>Pars</strong>
+一个在数字世界中默默无闻的一片叶子。
+一个热爱写作和分享知识的在校大二学生。这个博客是我记录生活点滴、分享思考和经验的地方。
+在这里，你会找到关于科技、旅行、生活心得的内容。我希望通过这些文字，能带给你一些启发和乐趣。如果你有任何问题或建议，欢迎随时联系我！</p><section><h2 id="为什么写博客">为什么写博客<a class="anchor" href="#为什么写博客"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2><p>记录成长：帮助我回顾过去，规划未来。
+分享价值：或许我的经历能帮到你。
+连接世界：期待与志同道合的朋友交流。</p><p>感谢你阅读我的博客！让我们一起探索这个精彩的世界。、</p><p>2025 Pars.  All rights reserved.</p></section><section><h2 id="️-关于本站">🛠️ 关于本站<a class="anchor" href="#️-关于本站"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2><p>这个网站使用 <strong>Astro</strong> 框架构建，采用了 <a href="https://github.com/CuteLeaf/Firefly">Firefly</a>模板</p><p><strong>WindHolm</strong> 是一款基于 Astro 框架开发的清新美观且现代化个人博客主题，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。</p><ul>
 <li>💻 <strong>GitHub</strong>: <a href="https://github.com/CuteLeaf">CuteLeaf</a></li>
 <li>✉️ <strong>Email</strong>: <a href="mailto:xiaye@msn.com">xiaye@msn.com</a></li>
-</ul><hr><p><em>感谢你的来访！希望在这里能找到对你有用的内容。Firefly博客系统完全开源，如果喜欢的话，不妨给个GitHub点个Star ⭐ 支持一下！</em></p></section></section>  </div> <script type="module">function l(n){const c=n.querySelectorAll("span.line");if(c.length>0){const e=[];for(let t=0;t<c.length;t++){const r=c[t].textContent||"";e.push(r)}return e.join(`
+</ul><hr></section></section>  </div> <script type="module">function l(n){const c=n.querySelectorAll("span.line");if(c.length>0){const e=[];for(let t=0;t<c.length;t++){const r=c[t].textContent||"";e.push(r)}return e.join(`
 `)}else{const e=n.querySelectorAll(".code:not(summary *)");if(e.length>0){const t=[];for(let o=0;o<e.length;o++){const s=e[o].textContent||"";t.push(s)}return t.join(`
 `)}else return n.textContent||""}}function i(n){return n.replace(/\n\n\n+/g,function(c){const t=c.length-1;let o;return t%2===0?o=t/2:o=Math.floor((t+1)/2),o<1&&(o=1),`
 `.repeat(o+1)})}async function u(n){try{return await navigator.clipboard.writeText(n),!0}catch(c){console.warn("Clipboard API 失败，尝试备用方案:",c);const e=document.createElement("textarea");e.value=n,e.style.position="fixed",e.style.left="-999999px",e.style.top="-999999px",document.body.appendChild(e),e.focus(),e.select();try{if(!document.execCommand("copy"))throw new Error("execCommand 返回 false");return!0}catch(t){throw console.error("execCommand 也失败了:",t),new Error("所有复制方法都失败了")}finally{document.body.removeChild(e)}}}async function a(n){const e=n.closest("pre")?.querySelector("code");if(!e){console.warn("未找到代码元素");return}let t=l(e);t=i(t);try{await u(t);const o=n.getAttribute("data-timeout-id");o&&clearTimeout(parseInt(o)),n.classList.add("success");const r=setTimeout(()=>{n.classList.remove("success")},1e3);n.setAttribute("data-timeout-id",r.toString())}catch(o){console.error("复制失败:",o)}}document.addEventListener("click",function(n){const c=n.target;c&&c.classList.contains("copy-btn")&&a(c)});</script> </div> </div>  <div class="footer col-span-2 onload-animation hidden lg:block"> <!--<div class="border-t border-[var(&#45;&#45;primary)] mx-16 border-dashed py-8 max-w-[var(&#45;&#45;page-width)] flex flex-col items-center justify-center px-6">--><div class="transition border-t border-black/10 dark:border-white/15 my-10 border-dashed mx-32"></div> <!--<div class="transition bg-[oklch(92%_0.01_var(&#45;&#45;hue))] dark:bg-black rounded-2xl py-8 mt-4 mb-8 flex flex-col items-center justify-center px-6">--> <div class="transition border-dashed border-[oklch(85%_0.01_var(--hue))] dark:border-white/15 rounded-2xl mb-12 flex flex-col items-center justify-center px-6"> <div class="transition text-50 text-sm text-center"> 
