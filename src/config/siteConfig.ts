@@ -52,7 +52,7 @@ export const siteConfig: SiteConfig = {
   
   // 追番配置
   bangumi: {
-    userId: "1163581", // 在此处设置你的Bangumi用户ID
+    userId: "1174154", // 在此处设置你的Bangumi用户ID
   },
 
   // 文章页底部的"上次编辑时间"卡片开关
@@ -71,7 +71,7 @@ export const siteConfig: SiteConfig = {
     // 默认布局模式："list" 列表模式（单列布局），"grid" 网格模式（双列布局）
     defaultMode: "list",
     // 是否允许用户切换布局
-    allowSwitch: true,
+    allowSwitch: false,
   },
 
   // 分页配置
