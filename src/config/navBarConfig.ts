@@ -37,7 +37,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
         url: "https://x.com/SLKaFAGNHI11131",
         external: true,
         icon: "fa6-brands:X",
-      }
+      }，
     ],
   });
 
