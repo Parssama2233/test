@@ -4,6 +4,6 @@ published: 2025-11-2
 description: 这是我 Astro 博客的第一篇文章.作为测试使用
 image: ./cover.jpg
 tags: [生活]
-category: 前端开发
+category: 文档测试
 draft: false
 ---
