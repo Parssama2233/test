@@ -1,15 +1,9 @@
 ---
-title: 我的第一篇测试文章
-published: 2025-11-01
-description: 这是我新 Astro 博客的第一篇测试文章。
+title: "Firefly 简单使用指南"
 pinned: true
-tags: [前端, 开发]
-category: 前端开发
+date: 2025-10-11 00:00:00
+description: "如何使用 Firefly 博客模板。"
+tags: ["Firefly", "博客", "Markdown", "使用指南"]
+categories: ["博客指南"]
 draft: false
 ---
-
-# 我的第一篇测试文章
-
-这是正文内容。你可以在这里写文章...
-
-**nihao**，世界！（清理后的示例）
