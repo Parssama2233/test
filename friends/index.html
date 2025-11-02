@@ -646,7 +646,77 @@ if (document.readyState === 'loading') {
 </style></section>  </div> <script type="module">function l(n){const c=n.querySelectorAll("span.line");if(c.length>0){const e=[];for(let t=0;t<c.length;t++){const r=c[t].textContent||"";e.push(r)}return e.join(`
 `)}else{const e=n.querySelectorAll(".code:not(summary *)");if(e.length>0){const t=[];for(let o=0;o<e.length;o++){const s=e[o].textContent||"";t.push(s)}return t.join(`
 `)}else return n.textContent||""}}function i(n){return n.replace(/\n\n\n+/g,function(c){const t=c.length-1;let o;return t%2===0?o=t/2:o=Math.floor((t+1)/2),o<1&&(o=1),`
-`.repeat(o+1)})}async function u(n){try{return await navigator.clipboard.writeText(n),!0}catch(c){console.warn("Clipboard API 失败，尝试备用方案:",c);const e=document.createElement("textarea");e.value=n,e.style.position="fixed",e.style.left="-999999px",e.style.top="-999999px",document.body.appendChild(e),e.focus(),e.select();try{if(!document.execCommand("copy"))throw new Error("execCommand 返回 false");return!0}catch(t){throw console.error("execCommand 也失败了:",t),new Error("所有复制方法都失败了")}finally{document.body.removeChild(e)}}}async function a(n){const e=n.closest("pre")?.querySelector("code");if(!e){console.warn("未找到代码元素");return}let t=l(e);t=i(t);try{await u(t);const o=n.getAttribute("data-timeout-id");o&&clearTimeout(parseInt(o)),n.classList.add("success");const r=setTimeout(()=>{n.classList.remove("success")},1e3);n.setAttribute("data-timeout-id",r.toString())}catch(o){console.error("复制失败:",o)}}document.addEventListener("click",function(n){const c=n.target;c&&c.classList.contains("copy-btn")&&a(c)});</script> </div> </div>  <div class="mt-4">  </div>  <div class="footer col-span-2 onload-animation hidden lg:block"> <!--<div class="border-t border-[var(&#45;&#45;primary)] mx-16 border-dashed py-8 max-w-[var(&#45;&#45;page-width)] flex flex-col items-center justify-center px-6">--><div class="transition border-t border-black/10 dark:border-white/15 my-10 border-dashed mx-32"></div> <!--<div class="transition bg-[oklch(92%_0.01_var(&#45;&#45;hue))] dark:bg-black rounded-2xl py-8 mt-4 mb-8 flex flex-col items-center justify-center px-6">--> <div class="transition border-dashed border-[oklch(85%_0.01_var(--hue))] dark:border-white/15 rounded-2xl mb-12 flex flex-col items-center justify-center px-6"> <div class="transition text-50 text-sm text-center"> 
+`.repeat(o+1)})}async function u(n){try{return await navigator.clipboard.writeText(n),!0}catch(c){console.warn("Clipboard API 失败，尝试备用方案:",c);const e=document.createElement("textarea");e.value=n,e.style.position="fixed",e.style.left="-999999px",e.style.top="-999999px",document.body.appendChild(e),e.focus(),e.select();try{if(!document.execCommand("copy"))throw new Error("execCommand 返回 false");return!0}catch(t){throw console.error("execCommand 也失败了:",t),new Error("所有复制方法都失败了")}finally{document.body.removeChild(e)}}}async function a(n){const e=n.closest("pre")?.querySelector("code");if(!e){console.warn("未找到代码元素");return}let t=l(e);t=i(t);try{await u(t);const o=n.getAttribute("data-timeout-id");o&&clearTimeout(parseInt(o)),n.classList.add("success");const r=setTimeout(()=>{n.classList.remove("success")},1e3);n.setAttribute("data-timeout-id",r.toString())}catch(o){console.error("复制失败:",o)}}document.addEventListener("click",function(n){const c=n.target;c&&c.classList.contains("copy-btn")&&a(c)});</script> </div> </div>  <div class="mt-4"> <div class="card-base p-8 mb-6 relative overflow-hidden"><!-- 评论区装饰性背景 --><div class="absolute top-0 right-0 w-32 h-32 opacity-5 pointer-events-none"><svg viewBox="0 0 100 100" class="w-full h-full"><circle cx="50" cy="50" r="40" fill="currentColor" class="text-[var(--primary)]"></circle><circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" stroke-width="2" class="text-[var(--primary)]"></circle><circle cx="50" cy="50" r="10" fill="currentColor" class="text-[var(--primary)]"></circle></svg></div><!-- 评论区标题 --><div class="relative z-10 mb-6"><div class="flex items-center gap-3 mb-2"><div class="w-1 h-6 bg-gradient-to-b from-[var(--primary)] to-transparent rounded-full"></div><h3 class="text-xl font-bold text-[var(--btn-content)]">评论区</h3></div><p class="text-sm text-[var(--content-meta)] ml-4">分享你的想法，与大家交流讨论</p></div><!-- 评论内容区域 --><div class="relative z-10"><div id="tcomment"></div> <!-- 使用自编译的 Twikoo 文件，避免点赞等按钮导致页面触发滚动回顶部 https://github.com/twikoojs/twikoo/issues/721 --> <script src="/assets/js/firefly-twikoo-1.6.44.all.min.js"></script> <script>(function(){const config = {"envId":"https://twikoo.vercel.app","lang":"zh-CN","visitorCount":true,"el":"#tcomment","path":"/friends"};
+
+  // 获取当前页面路径
+  function getCurrentPath() {
+    const pathname = window.location.pathname;
+    return pathname.endsWith("/") && pathname.length > 1
+      ? pathname.slice(0, -1)
+      : pathname;
+  }
+
+  // 动态创建配置对象
+  function createTwikooConfig() {
+    return {
+      ...config,
+      path: getCurrentPath(),
+      el: "#tcomment",
+    };
+  }
+
+  // 初始化 Twikoo
+  function initTwikoo() {
+    if (typeof twikoo !== "undefined") {
+      const commentEl = document.getElementById("tcomment");
+      if (commentEl) {
+        commentEl.innerHTML = "";
+
+        const dynamicConfig = createTwikooConfig();
+        console.log("[Twikoo] 初始化配置:", dynamicConfig);
+
+        twikoo
+          .init(dynamicConfig)
+          .then(() => {
+            console.log("[Twikoo] 初始化完成");
+          })
+          .catch((error) => {
+            console.error("[Twikoo] 初始化失败:", error);
+          });
+      }
+    } else {
+      // 如果 Twikoo 未加载，稍后重试
+      setTimeout(initTwikoo, 500);
+    }
+  }
+
+  // 页面加载时初始化
+  document.addEventListener("DOMContentLoaded", initTwikoo);
+
+  // Swup 页面切换后重新初始化
+  if (window.swup && window.swup.hooks) {
+    window.swup.hooks.on("content:replace", function () {
+      setTimeout(initTwikoo, 200);
+    });
+  } else {
+    document.addEventListener("swup:enable", function () {
+      if (window.swup && window.swup.hooks) {
+        window.swup.hooks.on("content:replace", function () {
+          setTimeout(initTwikoo, 200);
+        });
+      }
+    });
+  }
+
+  // 自定义事件监听
+  document.addEventListener("firefly:page:loaded", function () {
+    const commentEl = document.getElementById("tcomment");
+    if (commentEl) {
+      console.log("[Twikoo] 通过自定义事件重新初始化");
+      initTwikoo();
+    }
+  });
+})();</script></div></div> </div>  <div class="footer col-span-2 onload-animation hidden lg:block"> <!--<div class="border-t border-[var(&#45;&#45;primary)] mx-16 border-dashed py-8 max-w-[var(&#45;&#45;page-width)] flex flex-col items-center justify-center px-6">--><div class="transition border-t border-black/10 dark:border-white/15 my-10 border-dashed mx-32"></div> <!--<div class="transition bg-[oklch(92%_0.01_var(&#45;&#45;hue))] dark:bg-black rounded-2xl py-8 mt-4 mb-8 flex flex-col items-center justify-center px-6">--> <div class="transition border-dashed border-[oklch(85%_0.01_var(--hue))] dark:border-white/15 rounded-2xl mb-12 flex flex-col items-center justify-center px-6"> <div class="transition text-50 text-sm text-center"> 
 &copy; <span id="copyright-year">2025</span> WindHolm. All Rights Reserved. /
 <a class="transition link text-[var(--primary)] font-medium" href="/rss/" onclick="event.preventDefault(); navigateToPage('/rss/')">RSS</a> /
 <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="/sitemap-index.xml">Sitemap</a><br>
