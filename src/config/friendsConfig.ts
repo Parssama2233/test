@@ -5,11 +5,11 @@ import type { FriendLink } from "../types/config";
 // 友链配置
 export const friendsConfig: FriendLink[] = [
   {
-    title: "夏夜流萤",
+    title: "Stella’s TA Skills Share Blog",
     imgurl:
-      "https://q.qlogo.cn/headimg_dl?dst_uin=7618557&spec=640&img_type=jpg",
-    desc: "总有一场相遇，是互相喜欢的！",
-    siteurl: "https://blog.cuteleaf.cn",
+      "https://stellaastra.dpdns.org/favicon/icon2.png",
+    desc: "一探索图形技术与分享的平台",
+    siteurl: "https://stellaastra.dpdns.org/",
     tags: ["Blog"],
     weight: 10, // 权重，数字越大排序越靠前
     enabled: true, // 是否启用
