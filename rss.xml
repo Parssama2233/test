@@ -329,62 +329,6 @@ console.log(&apos;抱歉，你知道我在第几行吗?&apos;)
 &lt;pre&gt;&lt;code&gt;console.log(&apos;来自第5行的问候!&apos;)
 console.log(&apos;我在第6行&apos;)
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>Markdown 扩展功能</title><link>https://windholm.dpdns.org/posts/markdown-extended/</link><guid isPermaLink="true">https://windholm.dpdns.org/posts/markdown-extended/</guid><description>了解 Firefly 中的 Markdown 功能</description><pubDate>Wed, 01 May 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;GitHub 仓库卡片&lt;/h2&gt;
-&lt;p&gt;您可以添加链接到 GitHub 仓库的动态卡片，在页面加载时，仓库信息会从 GitHub API 获取。&lt;/p&gt;
-&lt;p&gt;::github{repo=&quot;CuteLeaf/Firefly&quot;}&lt;/p&gt;
-&lt;p&gt;使用代码 &lt;code&gt;::github{repo=&quot;CuteLeaf/Firefly&quot;}&lt;/code&gt; 创建 GitHub 仓库卡片。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;::github{repo=&quot;CuteLeaf/Firefly&quot;}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;提醒框&lt;/h2&gt;
-&lt;p&gt;支持以下类型的提醒框：&lt;code&gt;note&lt;/code&gt; &lt;code&gt;tip&lt;/code&gt; &lt;code&gt;important&lt;/code&gt; &lt;code&gt;warning&lt;/code&gt; &lt;code&gt;caution&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;:::note
-突出显示用户应该考虑的信息，即使在快速浏览时也是如此。
-:::&lt;/p&gt;
-&lt;p&gt;:::tip
-可选信息，帮助用户更成功。
-:::&lt;/p&gt;
-&lt;p&gt;:::important
-用户成功所必需的关键信息。
-:::&lt;/p&gt;
-&lt;p&gt;:::warning
-由于潜在风险需要用户立即注意的关键内容。
-:::&lt;/p&gt;
-&lt;p&gt;:::caution
-行动的负面潜在后果。
-:::&lt;/p&gt;
-&lt;h3&gt;基本语法&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;:::note
-突出显示用户应该考虑的信息，即使在快速浏览时也是如此。
-:::
-
-:::tip
-可选信息，帮助用户更成功。
-:::
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;自定义标题&lt;/h3&gt;
-&lt;p&gt;可以自定义提醒框的标题。&lt;/p&gt;
-&lt;p&gt;:::note[我的自定义标题]
-这是一个带有自定义标题的注释。
-:::&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;:::note[我的自定义标题]
-这是一个带有自定义标题的注释。
-:::
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;GitHub 语法&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;[!TIP]
-也支持 &lt;a href=&quot;https://github.com/orgs/community/discussions/16925&quot;&gt;GitHub 语法&lt;/a&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; [!NOTE]
-&amp;gt; 也支持 GitHub 语法。
-
-&amp;gt; [!TIP]
-&amp;gt; 也支持 GitHub 语法。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;剧透&lt;/h3&gt;
-&lt;p&gt;您可以为文本添加剧透。文本也支持 &lt;strong&gt;Markdown&lt;/strong&gt; 语法。&lt;/p&gt;
-&lt;p&gt;内容 :spoiler[被隐藏了 &lt;strong&gt;哈哈&lt;/strong&gt;]！&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;内容 :spoiler[被隐藏了 **哈哈**]！&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>Markdown Mermaid 图表</title><link>https://windholm.dpdns.org/posts/markdown-mermaid/</link><guid isPermaLink="true">https://windholm.dpdns.org/posts/markdown-mermaid/</guid><description>一个包含 Mermaid 的 Markdown 博客文章简单示例。</description><pubDate>Sun, 01 Oct 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Markdown 中 Mermaid 图表完整指南&lt;/h1&gt;
 &lt;p&gt;本文演示如何在 Markdown 文档中使用 Mermaid 创建各种复杂图表，包括流程图、时序图、甘特图、类图和状态图。&lt;/p&gt;
 &lt;h2&gt;流程图示例&lt;/h2&gt;
