@@ -15,12 +15,21 @@ export const friendsConfig: FriendLink[] = [
     enabled: true, // 是否启用
   },
   {
+    title: "yousen的博客",
+    imgurl: "https://q.qlogo.cn/headimg_dl?dst_uin=1607737794&spec=640&img_type=png",
+    desc: "机械结构工程师",
+    siteurl: "https://yousen1.top",
+    tags: ["Blog"],
+    weight: 9,
+    enabled: true,
+  },
+  {
     title: "Firefly Docs",
     imgurl: "https://docs-firefly.cuteleaf.cn/logo.png",
     desc: "Firefly主题模板文档",
     siteurl: "https://docs-firefly.cuteleaf.cn",
     tags: ["Docs"],
-    weight: 9,
+    weight: 2,
     enabled: true,
   },
   {
@@ -29,7 +38,7 @@ export const friendsConfig: FriendLink[] = [
     desc: "Firefly 一款清新美观的 Astro 博客主题模板",
     siteurl: "https://github.com/CuteLeaf/Firefly",
     tags: ["GitHub", "Theme"],
-    weight: 9,
+    weight: 2,
     enabled: true,
   },
   {
@@ -38,7 +47,7 @@ export const friendsConfig: FriendLink[] = [
     desc: "The web framework for content-driven websites. ⭐️ Star to support our work!",
     siteurl: "https://github.com/withastro/astro",
     tags: ["Framework"],
-    weight: 8,
+    weight: 1,
     enabled: true,
   },
 ];
