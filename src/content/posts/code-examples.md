@@ -3,7 +3,7 @@ title: WindHolm 代码块示例
 published: 2025-08-20
 pinned: false
 description: 在WindHolm中使用表达性代码的代码块在 Markdown 中的外观。
-tags: [Markdown, WIndHolm]
+tags: [Markdown, WindHolm]
 category: 文章示例
 draft: false
 ---
