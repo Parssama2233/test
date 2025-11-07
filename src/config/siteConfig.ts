@@ -85,7 +85,7 @@ export const siteConfig: SiteConfig = {
     switchable: false,
     // 背景图片配置
     src: {
-      desktop: "/videos/Cyrene.mp4",
+      desktop: "/assets/images/xilian.mp4",
       type: "video", 
       position: "center", 
       // 移动背景图片
