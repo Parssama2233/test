@@ -80,8 +80,6 @@ export const siteConfig: SiteConfig = {
     postsPerPage: 10,
   },
     // 背景图片配置
-       }
-        },
     src: {
       desktop: "/videos/Cyrene.mp4",
       type: "video", 
