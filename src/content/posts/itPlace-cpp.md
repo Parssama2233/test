@@ -1,12 +1,12 @@
 ---
-title: 从C语言入门到Java扩展：初学者实用指南
-published: 2025-11-12
+title: 从C语言入门到c++快速实战：初学者实用指南
+published: 2025-11-14
 draft: false
-description: 这篇博客为编程新手提供C语言基础教程，并逐步扩展到Java，帮助你理解两种语言的核心相似性和差异。
-tags: [编程, C语言, Java, 快速入门]
+description: 这篇博客提供C++快速实战教程
+tags: [编程, C语言, C++, 快速入门, 实战]
 image: /assets/images/cpp.png
 category: 计算机科学
-author: Pars
+author: Grok，Pars
 pinned: false
 ---
 ### C++ 学习教程：从零基础到游戏开发深度指南
@@ -417,5 +417,6 @@ int main() {
 1. 修改 Pong：添加球加速。
 2. 开发简单平台游戏：角色跳跃、敌人。
 3. 用多线程加载游戏资源（背景音乐）。
+
 
 **结语**：恭喜！你现在能开发基本游戏了。继续实践：克隆 Flappy Bird 或用 Godot (C++ 支持)。有问题随时问，我可以帮调试代码或扩展某个部分。加油！🚀
